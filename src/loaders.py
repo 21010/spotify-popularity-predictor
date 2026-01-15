@@ -1,12 +1,13 @@
 import logging
 from pathlib import Path
-from typing import overload, Optional
-
 from abc import ABC, abstractmethod
+
 import pandas as pd
 
-
 logger = logging.getLogger(__name__)
+
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
 
 
 class DataLoader(ABC):
