@@ -37,14 +37,15 @@ def run_training_pipeline(version: str = 'v1'):
     # Konfiguracja modelu
     logger.info("Inicjalizacja modelu XGBoost...")
     model = xgb.XGBRegressor(
-        n_estimators=1000,
-        learning_rate=0.05,
-        max_depth=8,
+        n_estimators=1500,
+        learning_rate=0.03,
+        max_depth=12,
         subsample=0.8,
-        colsample_bytree=0.8,
+        colsample_bytree=0.7,
         objective='reg:squarederror',
         n_jobs=-1,
-        random_state=42
+        random_state=42,
+        min_child_weight=1,
     )
 
     # Trening

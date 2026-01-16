@@ -21,7 +21,7 @@ class SpotifyDataCleaner(DataCleaner):
         logger.info("\nStarting data cleaning.")
         df = df.copy()
         initial_shape = df.shape
-        logger.info(f"\nInitial shape: {initial_shape}")
+        logger.info(f"Initial shape: {initial_shape}")
 
         df = self._drop_unnecessary_columns(df)
         df = self._remove_duplicates(df)
@@ -30,8 +30,8 @@ class SpotifyDataCleaner(DataCleaner):
         df = self._convert_data_types(df)
 
         logger.info(f"Data cleaning completed. Final shape: {df.shape}")
-        logger.info(f"\n(Removed {initial_shape[0] - df.shape[0]} rows)")
-        logger.info(f"\nShape after cleaning: {df.shape}")
+        logger.info(f"(Removed {initial_shape[0] - df.shape[0]} rows)")
+        logger.info(f"Shape after cleaning: {df.shape}")
 
         return df
 

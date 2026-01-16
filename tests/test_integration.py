@@ -27,7 +27,7 @@ def test_inference_end_to_end_demo():
         'tempo': 128.0,
         'duration_ms': 200000,  # 3:20
         'time_signature': 4,
-        'track_genre': 'rock'
+        'track_genre': 'pop'
     }
 
     # Definiujemy "niszę" (Muzyka relaksacyjna/klasyczna)

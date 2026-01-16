@@ -18,7 +18,6 @@ class ModelSerializer:
     def _ensure_directory_exists(self):
         """Tworzy katalog na modele, jeśli nie istnieje."""
         os.makedirs(self.base_dir, exist_ok=True)
-        logger.info(f"Utworzono katalog: {self.base_dir}")
 
     def save(self, obj: Any, filename: str) -> str:
         """
